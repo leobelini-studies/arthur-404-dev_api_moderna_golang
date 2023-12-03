@@ -7,6 +7,16 @@ import (
 	"github.com/leobelini-studies/arthur-404-dev_api_moderna_golang/schemas"
 )
 
+// @BasePath /api/v1
+// @Summary Create Opening
+// @Description Create a new job opening
+// @Accept json
+// @Param request body CreateOpeningRequest true "Request body"
+// @Produce json
+// @Success 200 {object} CreateOpeningResponse
+// @Failure 400 {object} ErrorResponse
+// @Failure 500 {object} ErrorResponse
+// @Router /opening [post]
 func CreateOpeningHandler(ctx *gin.Context) {
 
 	req := CreateOpeningRequest{}
